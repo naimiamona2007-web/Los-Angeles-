@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Angeles Role Play - سرفر SAMP متميز</title>
+    <link rel="stylesheet" href="beta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- الموسيقى الخلفية -->
+    <audio id="backgroundMusic" loop>
+        <source src="The Weeknd, Playboi Carti   Timeless  ( 𝚄𝙻𝚃𝚁𝙰 𝚂𝙻𝙾𝚆𝙴𝙳 )-𝙺 𝚇 𝚂 𝚃 𝚃 -1761994316348.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- تحكم الموسيقى -->
+    <div class="music-player">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-play" id="musicIcon"></i>
+        </button>
+        <div class="volume-control">
+            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+        </div>
+    </div>
+
+    <!-- شاشة التحميل -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="logo-text">
+                    <span>P</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>L</span>
+                </div>
+                <div class="logo-subtitle">Los Angeles Role Play</div>
+            </div>
+            <div class="loader-animation">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring delay-2"></div>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar">
+                    <div class="loader-progress"></div>
+                </div>
+                <div class="loader-text">جاري تحميل عالم Los Angeles...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-main">
+                    <i class="fas fa-city"></i>
+                    <div class="logo-text">
+                        <h2>Los Angeles</h2>
+                        <span>Role Play</span>
+                    </div>
+                </div>
+                <div class="server-status">
+                    <div class="status-indicator online"></div>
+                    <span>متصلة - 360+ لاعب</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        الرئيسية
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        عن السيرفر
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        المميزات
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        المعرض
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://discord.gg/d2TbncmWc" class="nav-link">
+                        <i class="fab fa-discord"></i>
+                        ديسكورد
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#join" class="nav-link nav-cta">
+                        <i class="fas fa-gamepad"></i>
+                        انضم الآن
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="player-count">
+                    <i class="fas fa-users"></i>
+                    <span>360+ لاعب متصل</span>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="parallax-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="element element-1"><i class="fas fa-car"></i></div>
+                <div class="element element-2"><i class="fas fa-home"></i></div>
+                <div class="element element-3"><i class="fas fa-dollar-sign"></i></div>
+                <div class="element element-4"><i class="fas fa-shield-alt"></i></div>
+                <div class="element element-5"><i class="fas fa-helicopter"></i></div>
+            </div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badges">
+                    <div class="badge premium">
+                        <i class="fas fa-crown"></i>
+                        سرفر #1 عربي
+                    </div>
+                    <div class="badge players">
+                        <i class="fas fa-users"></i>
+                        360+ لاعب نشط
+                    </div>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-line">مرحباً بك في</span>
+                    <span class="title-main">Los Angeles</span>
+                    <span class="title-sub">Role Play</span>
+                </h1>
+
+                <p class="hero-description">
+                    استمتع بتجربة لعب أدوار لا مثيل لها في عالم <strong>لوس أنجلوس</strong> الحقيقي. 
+                    انضم إلى مجتمعنا المكون من <strong>360+ لاعب نشط</strong> وابدأ رحلتك نحو القمة.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>24/7</h3>
+                            <p>متاح دائماً</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>80ms</h3>
+                            <p>بينج منخفض</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>دعم فني</h3>
+                            <p>على مدار الساعة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#join" class="btn btn-primary btn-large">
+                        <i class="fas fa-play-circle"></i>
+                        ابدأ اللعب الآن
+                    </a>
+                    <a href="https://discord.gg/d2TbncmWc" class="btn btn-secondary btn-large">
+                        <i class="fab fa-discord"></i>
+                        انضم للديسكورد
+                    </a>
+                </div>
+
+                <div class="server-info-quick">
+                    <div class="info-item">
+                        <span>IP:</span>
+                        <code>51.75.79.54:7016</code>
+                    </div>
+                    <div class="info-item">
+                        <span>اللاعبين:</span>
+                        <span>360</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="character-showcase">
+                    <div class="character-model">
+                        <div class="model-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="character-stats">
+                        <div class="stat-bar">
+                            <label>المستوى: 85</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <label>المال: $2,500,000</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <label>السمعة: 920</label>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن السيرفر -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">عالم <span>Los Angeles</span> ينتظرك</h2>
+                <p class="section-subtitle">اكتشف مدينة مليئة بالفرص والمغامرات</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-text">
+                        <h3>لماذا نحن الأفضل؟</h3>
+                        <p>
+                            سيرفر <strong>Los Angeles Role Play</strong> يمثل ذروة تجارب لعب الأدوار في عالم 
+                            <strong>San Andreas Multiplayer</strong>. نحن نقدم بيئة لعب واقعية وممتعة مع نظام 
+                            اقتصادي متكامل، ووظائف متنوعة، ومجتمع نشط.
+                        </p>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>نظام لعب أدوار متقدم ومطور</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>اقتصاد ديناميكي وحقيقي</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>أكثر من 50 وظيفة مختلفة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>نظام عقارات متكامل</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>مركبات حصرية وقابلة للتعديل</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>دعم فني على مدار الساعة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <div class="stat-number">360+</div>
+                                <div class="stat-label">لاعب نشط</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">متاح دائماً</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">وظيفة متاحة</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">2025</div>
+                                <div class="stat-label">سنة التأسيس</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <h4>معلومات السيرفر المباشرة</h4>
+                            <div class="server-status">
+                                <div class="status online"></div>
+                                <span>متصل</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="info-row">
+                                <span>العنوان:</span>
+                                <code>51.75.79.54:7016</code>
+                            </div>
+                            <div class="info-row">
+                                <span>اللاعبين:</span>
+                                <span class="players-online">30</span>
+                            </div>
+                            <div class="info-row">
+                                <span>الإصدار:</span>
+                                <span>v3.2.1</span>
+                            </div>
+                            <div class="info-row">
+                                <span>البينج:</span>
+                                <span class="ping">80ms</span>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-copy" data-ip="51.75.79.54:7016">
+                                <i class="fas fa-copy"></i>
+                                نسخ IP
+                            </button>
+                            <a href="samp://51.75.79.54:7016" class="btn-connect">
+                                <i class="fas fa-plug"></i>
+                                اتصل مباشرة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مميزات <span>استثنائية</span></h2>
+                <p class="section-subtitle">اكتشف ما يجعلنا مختلفين عن الآخرين</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h3>مدينة حية</h3>
+                            <p>عالم مفتوح مليء بالتفاصيل الدقيقة</p>
+                            <div class="card-badge">جديد</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>مدينة Los Angeles</h4>
+                            <p>استكشف مدينة ديناميكية مع أنظمة متطورة</p>
+                            <ul>
+                                <li>أحياء سكنية متعددة</li>
+                                </li>مراكز تجارية حية</li>
+                                <li>أنظمة طقس واقعية</li>
+                                <li>اقتصاد متطور</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>وظائف متنوعة</h3>
+                            <p>اختر من بين عشرات الوظائف المثيرة</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>الوظائف المتاحة</h4>
+                            <p>من القانونية إلى أنشطة العصابات</p>
+                            <ul>
+                                <li>وظائف حكومية</li>
+                                <li>أنشطة تجارية</li>
+                                <li>مهام خاصة</li>
+                                <li>أنظمة عصابات</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <h3>مركبات فاخرة</h3>
+                            <p>مجموعة ضخمة من المركبات الحصرية</p>
+                            <div class="card-badge">حصري</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>أسطول المركبات</h4>
+                            <p>أكثر من 200 مركبة قابلة للتعديل</p>
+                            <ul>
+                                <li>سوبر كار حصرية</li>
+                                <li>نظام تعديل متقدم</li>
+                                <li>مرائب شخصية</li>
+                                <li>سباقات حصرية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>عقارات فاخرة</h3>
+                            <p>امتلك منزلاً يحلم به الجميع</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>نظام العقارات</h4>
+                            <p>استثمر في عالم العقارات</p>
+                            <ul>
+                                <li>شقق فاخرة</li>
+                                <li>فلل خاصة</li>
+                                <li>منازل قابلة للتخصيص</li>
+                                <li>استثمار عقاري</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>نظام أمني</h3>
+                            <p>شرطة ومؤسسات أمنية متكاملة</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>النظام الأمني</h4>
+                            <p>انضم إلى قوات الشرطة أو كن مجرماً</p>
+                            <ul>
+                                <li>نظام شرطة واقعي</li>
+                                <li>مهام أمنية متنوعة</li>
+                                <li>أنظمة مطاردة</li>
+                                <li>تحقيقات جنائية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>إنجازات وتحديات</h3>
+                            <p>اكسب الجوائز وأثبت مهاراتك</p>
+                        </div>
+                        <div class="card-back">
+                            <h4>نظام الإنجازات</h4>
+                            <p>تحديات أسبوعية وجوائز حصرية</p>
+                            <ul>
+                                <li>تحديات أسبوعية</li>
+                                <li>مكافآت حصرية</li>
+                                <li>تصنيفات عالمية</li>
+                                <li>بطولات دورية</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الديسكورد -->
+    <section id="discord" class="discord">
+        <div class="container">
+            <div class="discord-container">
+                <div class="discord-content">
+                    <div class="discord-header">
+                        <i class="fab fa-discord"></i>
+                        <h2>انضم إلى مجتمعنا على <span>الديسكورد</span></h2>
+                    </div>
+                    <p class="discord-description">
+                        انضم إلى <strong>360+ عضو</strong> في مجتمعنا النشط على الديسكورد. 
+                        احصل على آخر الأخبار، تواصل مع اللاعبين، وكن جزءاً من عائلة LARP.
+                    </p>
+                    
+                    <div class="discord-stats">
+                        <div class="discord-stat">
+                            <div class="stat-number">360+</div>
+                            <div class="stat-label">عضو نشط</div>
+                        </div>
+                        <div class="discord-stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">دعم فني</div>
+                        </div>
+                        <div class="discord-stat">
+                            <div class="stat-number">#15</div>
+                            <div class="stat-label">قناة نشطة</div>
+                        </div>
+                    </div>
+
+                    <a href="https://discord.gg/d2TbncmWc" class="btn btn-discord btn-large">
+                        <i class="fab fa-discord"></i>
+                        انضم إلى السيرفر
+                    </a>
+                </div>
+
+                <div class="discord-preview">
+                    <div class="discord-widget">
+                        <div class="widget-header">
+                            <div class="server-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <div class="server-info">
+                                <h4>Los Angeles RP</h4>
+                                <span>360 عضو متصل</span>
+                            </div>
+                        </div>
+                        <div class="widget-channels">
+                            <div class="channel-category">
+                                <h5>📝 معلومات</h5>
+                                <div class="channel active">
+                                    <i class="fas fa-hashtag"></i>
+                                    <span>القوانين</span>
+                                </div>
+                                <div class="channel">
+                                    <i class="fas fa-hashtag"></i>
+                                    <span>الإعلانات</span>
+                                </div>
+                            </div>
+                            <div class="channel-category">
+                                <h5>💬 محادثات</h5>
+                                <div class="channel">
+                                    <i class="fas fa-hashtag"></i>
+                                    <span>عام</span>
+                                </div>
+                                <div class="channel">
+                                    <i class="fas fa-hashtag"></i>
+                                    <span>مساعدات</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-members">
+                            <div class="members-online">
+                                <span>أعضاء ديسكورد  - 360</span>
+                            </div>
+                            <div class="member-list">
+                                <div class="member">
+                                    <div class="member-avatar"></div>
+                                    <span class="member-name">Player_01</span>
+                                </div>
+                                <div class="member">
+                                    <div class="member-avatar"></div>
+                                    <span class="member-name">Admin_Team</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الانضمام -->
+    <section id="join" class="join">
+        <div class="container">
+            <div class="join-container">
+                <div class="join-content">
+                    <h2>جاهز <span>للمغامرة</span>؟</h2>
+                    <p class="join-description">
+                        انضم إلى <strong>360+ لاعب</strong> وابدأ رحلتك في عالم Los Angeles Role Play الآن!
+                    </p>
+
+                    <div class="join-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>قم بتنزيل SAMP</h4>
+                                <p>نزّل San Andreas Multiplayer من الموقع الرسمي</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>أضف السيرفر</h4>
+                                <p>أضف عنوان سيرفرنا إلى قائمة المفضلة</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>ابدأ اللعب</h4>
+                                <p>اتصل بالسيرفر وابدأ مغامرتك في لوس أنجلوس</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="server-connection">
+                        <h4>اتصل بالسيرفر الآن:</h4>
+                        <div class="connection-box">
+                            <div class="ip-address">
+                                <code>51.75.79.54:7016</code>
+                                <button class="btn-copy-ip" data-ip="51.75.79.54:7016">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            <a href="samp://51.75.79.54:7016" class="btn btn-primary btn-connect">
+                                <i class="fas fa-plug"></i>
+                                اتصل مباشرة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="join-visual">
+                    <div class="countdown-timer">
+                        <h4>انضم الآن ولا تفوت الفرصة!</h4>
+                        <div class="timer">
+                            <div class="time-unit">
+                                <span class="time-number">30</span>
+                                <span class="time-label">لاعب متصل</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-unit">
+                                <span class="time-number">170</span>
+                                <span class="time-label">مكان متبقي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <i class="fas fa-city"></i>
+                            <div class="logo-text">
+                                <h3>Los Angeles</h3>
+                                <span>Role Play</span>
+                            </div>
+                        </div>
+                        <p>أفضل سيرفر لعب أدوار عربي لـ San Andreas Multiplayer</p>
+                        <div class="social-links">
+                            <a href="https://discord.gg/d2TbncmWc" class="social-link">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>السيرفر</h4>
+                            <a href="#about">عن السيرفر</a>
+                            <a href="#features">المميزات</a>
+                            <a href="#rules">القوانين</a>
+                            <a href="#join">كيفية الانضمام</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>المجتمع</h4>
+                            <a href="#discord">الديسكورد</a>
+                            <a href="#">الفريق</a>
+                            <a href="#">الإنجازات</a>
+                            <a href="#">الأخبار</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>الدعم</h4>
+                            <a href="#">المساعدة</a>
+                            <a href="#">الإبلاغ عن مشكلة</a>
+                            <a href="#">الأسئلة الشائعة</a>
+                            <a href="#">التواصل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="server-info">
+                        <div class="info-item">
+                            <i class="fas fa-server"></i>
+                            <span>51.75.79.54:7016</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>360 لاعب</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-signal"></i>
+                            <span>80ms بينج</span>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2025 Los Angeles Role Play. جميع الحقوق محفوظة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="beta.js"></script>
+</body>
+</html>
